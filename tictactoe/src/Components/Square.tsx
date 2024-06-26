@@ -2,17 +2,17 @@
 
 interface SquareProps {
     value: string
-    handleClick: () => void
+    onSquareClick: () => void
 }
 
 
-const Square = ({value, handleClick}:SquareProps) => {
+const Square = ({value, onSquareClick}:SquareProps) => {
 
 
     
   return (
     <>
-        <button onClick={handleClick} className="square">{value}</button>
+        <button onClick={onSquareClick} className="square">{value}</button>
     </>
   )
 }
