@@ -7,6 +7,8 @@ interface Props {
 }
 
 const Board = ({ xIsNext, squares, onPlay }: Props) => {
+    //nexSquares needs a useState
+    //squares needs a useState
 
     const handleClick = (i:number) => {
         if (squares[i] || calculateWinner(squares)) {

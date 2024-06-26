@@ -8,14 +8,14 @@ const Game = () => {
     const xIsNext = currentMove % 2 === 0;
     const currentSquares = history[currentMove];
 
-    const handlePlay = (nextSquares) => {
+    const handlePlay = (nextSquares:any) => {
         const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
         setHistory(nextHistory);
         setCurrentMove(nextHistory.length - 1);
         // setXIsNext(!xIsNext);
     }
 
-    const moves = history.map((squares, move) => {
+    const moves = history.map((squares, move:number) => {
         let description;
         if (move > 0) {
             description = 'Go to move #' + move;
@@ -29,7 +29,7 @@ const Game = () => {
         );
     });
 
-    const jumpTo = (nextMove) => {
+    const jumpTo = (nextMove:number) => {
         setCurrentMove(nextMove);
         // setXIsNext(nextMove % 2 === 0);
     }
