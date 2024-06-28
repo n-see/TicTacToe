@@ -2,13 +2,14 @@ import Square from "./Square";
 
 interface Props {
     xIsNext: boolean
-    squares: string[]
-    onPlay: (nextSquares:(string | null)[]) => void
+    squares:any
+    onPlay: (nextSquares:string[]) => void
 }
 
 const Board = ({ xIsNext, squares, onPlay }: Props) => {
     //nexSquares needs a useState
     //squares needs a useState
+    
 
     const handleClick = (i:number) => {
         if (squares[i] || calculateWinner(squares)) {
@@ -22,7 +23,7 @@ const Board = ({ xIsNext, squares, onPlay }: Props) => {
         }
         onPlay(nextSquares);
     };
-    const calculateWinner = (squares:string) => {
+    const calculateWinner = (squares:string[]) => {
         const lines = [
             [0, 1, 2],
             [3, 4, 5],
@@ -57,6 +58,9 @@ const Board = ({ xIsNext, squares, onPlay }: Props) => {
     return (
         <>
         <div className="status">{status}</div>
+        <div className="allSquares">
+
+        
             <div className="board-row">
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
                 <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -72,7 +76,7 @@ const Board = ({ xIsNext, squares, onPlay }: Props) => {
                 <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
                 <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
             </div>
-
+            </div>
 
         </>
     )

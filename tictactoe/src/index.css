@@ -1,4 +1,38 @@
-.square{
-    height: 40px;
-    width: 40px;
+/* .square{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+  } */
+   body{
+    background-color:rgb(57, 124, 182) !important;
+   }
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 64px; 
+    font-weight: bold;
+    line-height: 94px; 
+    height: 94px; 
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 94px; 
+  }
+  .game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+  .moveBtn {
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color:azure;
+  }
+  .square:hover{
+    background-color: bisque;
   }

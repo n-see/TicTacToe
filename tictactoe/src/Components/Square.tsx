@@ -12,7 +12,7 @@ const Square = ({value, onSquareClick}:SquareProps) => {
     
   return (
     <>
-        <button onClick={onSquareClick} className="square">{value}</button>
+        <button onClick={onSquareClick} className="square m-1">{value}</button>
     </>
   )
 }
