@@ -57,7 +57,7 @@ const Board = ({ xIsNext, squares, onPlay }: Props) => {
 
     return (
         <>
-        <div className="status">{status}</div>
+        <div className="status text-center">{status}</div>
         <div className="allSquares">
 
         
